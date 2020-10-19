@@ -55,17 +55,17 @@ pipeline{
 
 
         stage('Cloning our Git') { 
-
+agent any
             steps { 
 
-                git 'https://github.com/madhuri-stack/DevOpsClassCodes/edit/master/JenkinsFile1' 
+                git 'https://github.com/mohitkhokhar172/DevOpsClassCodes.git' 
 
             }
 
         } 
 
         stage('Building our image') { 
-
+agent any
             steps { 
 
                 script { 
@@ -79,7 +79,7 @@ pipeline{
         }
 
         stage('Deploy our image') { 
-
+agent any
             steps { 
 
                 script { 
@@ -95,7 +95,7 @@ pipeline{
         } 
 
         stage('Cleaning up') { 
-
+agent any
             steps { 
 
                 sh "docker rmi $registry:$BUILD_NUMBER" 
