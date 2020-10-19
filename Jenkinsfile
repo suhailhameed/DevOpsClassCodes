@@ -48,7 +48,7 @@ pipeline{
         stage('Package'){
             agent any
             steps{
-                bat 'mvn package'
+                sh 'mvn package'
             }
         }
     
