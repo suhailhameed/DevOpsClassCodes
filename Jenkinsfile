@@ -3,6 +3,15 @@ pipeline{
         jdk 'myjava'
         maven 'mymaven1'
     }
+    environment { 
+
+        registry = "devopslearner45/myrepo" 
+
+        registryCredential = 'devopslearner45' 
+
+        dockerImage = '' 
+
+    }
     agent none
     stages{
         stage('Checkout'){
@@ -44,15 +53,7 @@ pipeline{
         }
     
 
-environment { 
 
-        registry = "devopslearner45/myrepo" 
-
-        registryCredential = 'devopslearner45' 
-
-        dockerImage = '' 
-
-    }
         stage('Cloning our Git') { 
 
             steps { 
