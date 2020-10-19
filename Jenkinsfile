@@ -5,7 +5,7 @@ pipeline{
     }
     environment { 
 
-        registry = "devopslearner45/myrepo" 
+        registry = "mohitkhokhar172/sample" 
 
         registryCredential = 'devopslearner45' 
 
