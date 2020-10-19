@@ -69,7 +69,7 @@ agent any
             steps { 
 
                 script { 
-
+                    sh 'whoami'
                     dockerImage = docker.build registry + ":$BUILD_NUMBER" 
 
                 }
